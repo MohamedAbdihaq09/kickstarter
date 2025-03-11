@@ -119,8 +119,61 @@
 	</div>
 </div>
 
+<div class="container py-5" id="booking">
+	<div class="text-center mb-5">
+		<h2 class="fw-bold">Book Din Tid</h2>
+		<p class="text-muted">Vælg din service, dato og tidspunkt for en klipning.</p>
+	</div>
+
+	<div class="row justify-content-center">
+		<div class="col-lg-6">
+			<form id="bookingForm" class="bg-white p-4 shadow rounded">
+				<div class="mb-3">
+					<label class="form-label">Vælg Tjeneste:</label>
+					<select class="form-select" id="service">
+						<option value="Haircut">Haircut - 45 min</option>
+						<option value="Beard Trim">Beard Trim - 30 min</option>
+						<option value="Hot Shave">Hot Shave - 45 min</option>
+					</select>
+				</div>
+
+				<div class="mb-3">
+					<label class="form-label">Vælg Dato:</label>
+					<input type="date" class="form-control" id="date" required>
+				</div>
+
+				<div class="mb-3">
+					<label class="form-label">Vælg Tidspunkt:</label>
+					<select class="form-select" id="time">
+						<option>09:00 AM</option>
+						<option>10:00 AM</option>
+						<option>11:00 AM</option>
+						<option>12:00 PM</option>
+						<option>01:00 PM</option>
+						<option>02:00 PM</option>
+						<option>03:00 PM</option>
+						<option>04:00 PM</option>
+						<option>05:00 PM</option>
+					</select>
+				</div>
+
+				<button type="submit" class="btn btn-primary w-100">Bekræft Booking</button>
+			</form>
+
+			<div id="confirmationMessage" class="alert alert-success mt-4 d-none"></div>
+		</div>
+	</div>
+</div>
+
+<footer class="text-black text-center py-4 mt-5">
+	<div class="container">
+		<p class="mb-0">©2025 FlexCut. Alle rettigheder forbeholdes.</p>
+	</div>
+</footer>
+
+
 <!-- Kontaktsektion -->
-<section>
+
 <div class="container py-5">
 	<div class="text-center mb-5">
 		<h2 class="fw-bold">Kontakt os</h2>
@@ -174,7 +227,7 @@
 		</div>
 	</div>
 </div>
-</section>
+
 <footer class="text-black text-center py-4 mt-5">
 	<div class="container d-flex justify-content-between align-items-center">
 		<div class="text-center">
@@ -197,5 +250,21 @@
 
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+	document.getElementById("bookingForm").addEventListener("submit", function(event) {
+		event.preventDefault();
+		const service = document.getElementById("service").value;
+		const date = document.getElementById("date").value;
+		const time = document.getElementById("time").value;
+		if (!date) {
+			alert("Vælg venligst en dato!");
+			return;
+		}
+		const message = `Tak! Din booking til ${service} den ${date} kl. ${time} er bekræftet.`;
+		const confirmationDiv = document.getElementById("confirmationMessage");
+		confirmationDiv.textContent = message;
+		confirmationDiv.classList.remove("d-none");
+	});
+</script>
 </body>
 </html>
