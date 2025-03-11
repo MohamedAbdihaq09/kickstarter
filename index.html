@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>FlexCut</title>
+	<link href="css/styles.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+	<style>
+		/* Import af Agdasima font */
+		@import url('https://fonts.googleapis.com/css2?family=Agdasima&display=swap'); /* Korrigeret font */
+
+		/* Tilføj fonten Stay Chill */
+		@font-face {
+			font-family: 'StayChill';  /* Navnet på fonten */
+			src: url('fonts/StayChill-PVVD7.ttf') format('truetype');  /* Sti til fontfilen */
+			font-weight: normal;
+			font-style: normal;
+		}
+
+		/* Brug fonten Stay Chill på specifik tekst */
+		h1, .chill-text {
+			font-family: 'StayChill', sans-serif;
+		}
+
+		/* Brug Agdasima som læsefont */
+		body {
+			font-family: 'Agdasima', serif; /* Opdateret font til Agdasima */
+			font-size: 1rem; /* Standard fontstørrelse */
+			line-height: 1.6; /* God linjeafstand for læsbarhed */
+			color: #333; /* Kontrastfarve for tekst */
+		}
+
+		/* Øg fontstørrelsen på h1 */
+		h1 {
+			font-size: 4rem;  /* Størrelse på fonten */
+			color: #ffffff; /* Farve på fonten */
+			padding-top: 150px;
+		}
+
+		/* Eksempel på styling af ordet "FlexCut" i en klasse */
+		.flexcut-text {
+			font-family: 'StayChill', sans-serif;
+			font-size: 3.5rem;  /* Størrelse på fonten */
+			color: #ffffff;  /* Farve på fonten */
+			margin-top: 5px;  /* Plads mellem de to linjer */
+		}
+
+		/* Justering af navbaren */
+		.navbar {
+			padding-left: 10px;  /* Reducer padding venstre */
+			padding-right: 10px;  /* Reducer padding højre */
+		}
+
+		/* Justering af navbar-link */
+		.navbar-nav .nav-link {
+			margin-right: 10px;  /* Skab lidt luft mellem linkene */
+			font-size: 1.1rem;  /* Gør skrifttypen lidt mindre */
+		}
+
+		/* Ændre knap størrelse og padding */
+		.navbar .btn {
+			padding: 8px 15px;  /* Reducer padding for knappen */
+		}
+	</style>
+</head>
+<body>
+<!-- Hero sektion med baggrundsbillede -->
+<div class="container-fluid bgbillede">
+	<!-- Navbar -->
+	<nav class="navbar navbar-expand-lg navbar-dark rounded-navbar fixed-top" style="background: rgba(75, 75, 75, 0.53); padding: 10px 20px; margin-top: 25px;">
+		<div class="container"> <!-- Brug container i stedet for container-fluid -->
+			<!-- Navbar brand med ikonet -->
+			<a class="navbar-brand" href="#">
+				<i class="fa-solid fa-scissors"></i> <!-- Saks ikon inde i en grå cirkel -->
+			</a>
+
+			<!-- Mobile menu toggle button -->
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<!-- Navbar links -->
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav mx-auto">
+					<li class="nav-item">
+						<a class="nav-link fw-semibold" href="#">Hjem</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link fw-semibold" href="#">Funktioner</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link fw-semibold" href="#">Om os</a>
+					</li>
+				</ul>
+			</div>
+
+			<!-- Sort "Kontakt os" knap til højre -->
+			<a href="#kontakt" class="btn text-white bg-black ms-auto fw-semibold">Kontakt Os</a>
+		</div>
+	</nav>
+
+	<!-- Hero sektion tekst -->
+	<div class="hero-text text-start text-white" style="padding-top: 180px; margin-left: 0px;"> <!-- Justeret padding-top for at reducere luft -->
+		<h1 class="display-4">Velkommen til</h1>
+		<!-- Tilføjet tekst FlexCut under overskriften -->
+		<div class="flexcut-text">FlexCut</div>
+		<br>
+		<!-- Grøn booking knap med farven #4CAF50, lige over <p> -->
+		<a href="#booking" class="btn" style="background-color: #4CAF50; color: white; font-size: 1.2rem; padding: 10px 20px; text-decoration: none; display: inline-flex; align-items: center; margin-top: 20px;">
+			Booking <i class="fa-solid fa-arrow-right ms-2"></i> <!-- Pil til højre inde i knappen -->
+		</a>
+		<br><br>
+		<p class="lead">FlexCut er en moderne frisørservice,
+			hvor du nemt kan booke en professionel frisør til hjemmebesøg
+			og vælge mellem klipning, styling og barbering.</p>
+	</div>
+</div>
+
+<!-- Kontaktsektion -->
+<section>
+<div class="container py-5">
+	<div class="text-center mb-5">
+		<h2 class="fw-bold">Kontakt os</h2>
+		<p class="text-muted">Udforsk, hvordan vores løsninger kan støtte din kreativitet og forbedre din oplevelse.</p>
+	</div>
+
+	<div class="row g-4">
+		<div class="col-md-6">
+			<div class="p-4 bg-white rounded shadow-sm contact-card h-100">
+				<div class="d-flex align-items-start">
+					<div class="contact-icon me-3">
+						<i class="fa-regular fa-clock" style="color: #4CAF50;"></i> <!-- Farve ændret til grøn -->
+					</div>
+					<div>
+						<h5 class="fw-semibold">Åbningstider</h5>
+						<p class="text-muted mb-2">Mandag-fredag, 8:00 til 17:00. Vi er her for at hjælpe dig i løbet af arbejdsugen.</p>
+						<a href="#" class="text-success text-decoration-none">Se åbningstider →</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-6">
+			<div class="p-4 bg-white rounded shadow-sm contact-card h-100">
+				<div class="d-flex align-items-start">
+					<div class="contact-icon me-3">
+						<i class="fa-solid fa-location-dot" style="color: #4CAF50;"></i> <!-- Farve ændret til grøn -->
+					</div>
+					<div>
+						<h5 class="fw-semibold">Vores adresse</h5>
+						<p class="text-muted mb-2">FlexCut A/S, 1234 København, Danmark. Besøg os for en personlig konsultation.</p>
+						<a href="#" class="text-success text-decoration-none">Find os her →</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="col-md-6">
+			<div class="p-4 bg-white rounded shadow-sm contact-card h-100">
+				<div class="d-flex align-items-start">
+					<div class="contact-icon me-3">
+						<i class="fa-solid fa-phone" style="color: #4CAF50;"></i> <!-- Farve ændret til grøn -->
+					</div>
+					<div>
+						<h5 class="fw-semibold">Kontakt os</h5>
+						<p class="text-muted mb-2">+45 12 34 56 78 eller info@flexcut.dk. Vi er klar til at besvare dine spørgsmål.</p>
+						<a href="#" class="text-success text-decoration-none">Kontakt os nu →</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</section>
+<footer class="text-black text-center py-4 mt-5">
+	<div class="container d-flex justify-content-between align-items-center">
+		<div class="text-center">
+			<p class="mb-0"> ©2025 FlexCut. Alle rettigheder forbeholdes.</p>
+			<p class="mb-0">
+				<a href="#" class="text-black text-decoration-none mx-2">Privatlivspolitik</a> |
+				<a href="#" class="text-black text-decoration-none mx-2">Vilkår og Betingelser</a>
+			</p>
+		</div>
+		<div class="social-icons">
+			<a href="https://www.instagram.com/" target="_blank" class="text-black text-decoration-none mx-2">
+				<i class="fa-brands fa-instagram"></i>
+			</a>
+			<a href="https://www.facebook.com" target="_blank" class="text-black text-decoration-none mx-2">
+				<i class="fa-brands fa-facebook"></i>
+			</a>
+		</div>
+	</div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
